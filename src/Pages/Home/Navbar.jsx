@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
-function Navbar() {
+export default function Navbar() {
   const [navActive, setNavActive] = useState(false);
 
   const toggleNav = () => {
@@ -35,7 +35,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>
       <div>
-        <img src="./img/logo.svg" alt="logoipsun" />
+        <img src="./img/logo.svg" alt="logoipsun" width={150} />
       </div>
       <a
         className={`nav__hamburger ${navActive ? "active" : ""}`}
@@ -121,5 +121,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;

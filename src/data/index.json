@@ -2,21 +2,92 @@
   "skills": [
     {
       "id": 1,
-      "src": "./img/product-chain-1.png",
-      "title": "Front-End",
-      "description": "lorem ipsum dolor sit amet"
+      "src": "./img/feather-pen-1.png",
+      "title": "Web page layout and styling",
+      "description": [
+        { "Technologies and Languages": "HTML5, CSS3, Sass/SCSS" },
+        {
+          "Methodologies and Approaches": "Responsive Web Design, Mobile-First Design, Flexbox, CSS Grid, BEM"
+        },
+
+        {
+          "Optimization and Performance": "CSS Minification, Image Optimization, Lazy Loading, Critical CSS"
+        },
+        { "Animations and Transitions": "CSS Animations, CSS Transitions" },
+        { "Version control": "Git, GitHub, GitLab" }
+      ]
     },
     {
       "id": 2,
-      "src": "./img/tag-1.png",
-      "title": "Back-End",
-      "description": "lorem ipsum dolor sit amet"
+      "src": "./img/product-chain-1.png",
+      "title": "Frontend technologies",
+      "description": [
+        { "Frameworks and libraries": "React, Redux/toolkit" },
+        {
+          "Styling and design": "CSS-in-JS (Styled-components, Emotion), Material-UI, Tailwind CSS"
+        },
+        {
+          "Build and Automation Tools": "Gulp, Webpack, Vite, ESLint, Prettier"
+        },
+        { "Testing": "Jest, React Testing Library" },
+        { "Working with APIs": "RESTful API, Axios, Fetch API" },
+        {
+          "Methodologies": "Component-based architecture, Responsive Design, Single Page Applications (SPA)"
+        }
+      ]
     },
     {
       "id": 3,
-      "src": "./img/feather-pen-1.png",
-      "title": "Webflow develop",
-      "description": "lorem ipsum dolor sit amet"
+      "src": "./img/tag-1.png",
+      "title": "Project management and collaboration",
+      "description": [
+        { "Methodologies and Practices": "Agile, Scrum, Kanban, Waterfall" },
+        { "Tools and Platforms": "Jira, Trello, Bitrix24, Slack, Miro" }
+      ]
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "img": "./img/placeholder-image.png",
+      "title": "Commercial project",
+      "description": "This is a calculator for a Google site, where information is collected from the client and sent to the manager's email. The projects are designed for all types of devices (html, sass). Written in pure JavaScript, the smtp.js library is used to send data by email. The projects are built using Gulp.",
+      "link": "View on the customer's website",
+      "href": "https://n9.cl/5g43c"
+    },
+    {
+      "id": 2,
+      "img": "./img/twitter.jpg",
+      "title": "Project in team. Twitter (step project)",
+      "description": "My part of work is: from markup to fetching data from the backend - search friends, recommended friends, bookmarks, change the theme; styled: posts, profile. Core Tools: React, Redux Toolkit, Axios. Form and Validation: Formik/Yup, prop-types.",
+      "link": "View in github",
+      "href": "https://miniurl.top/Gue-"
+    },
+    {
+      "id": 3,
+      "img": "./img/online-store.jpg",
+      "title": "My project. Online store",
+      "description": "This is a small version of an online store where you can add products to your favorites, cart, and proceed to checkout. You can also create an order. To implement this project I used React, Redux, Formik/Yup, prop-types, Sass for styling components, snapshot testing for certain components",
+      "link": "View in gitlab",
+      "href": "https://miniurl.top/Izh5"
+    }
+  ],
+  "testimonial": [
+    {
+      "id": 1,
+      "count": 5,
+      "src": "./img/avatar-image.jpg",
+      "description": "Nastya was one of the first to respond to my job posting on the Weblancer website. She immediately warned me that she had little experience but assured me she could do what I needed. I trusted her. As a result, instead of one project, we completed two. She was easy to work with, always available, took my design preferences into account, addressed my comments about the calculator's functionality, and frequently suggested her own ideas on how to improve things from a user's perspective. I am very satisfied with our collaboration. Thanks to her for the cooperation.",
+      "author_name": "Sergey",
+      "author_designation": "Company 95, Warszawa"
+    },
+    {
+      "id": 2,
+      "count": 5,
+      "src": "./img/avatar-image-1.jpg",
+      "description": "Thank you for helping populate the product database. I know it's a monotonous task, but you handled it well. I would never have guessed it was your first time working with Shopify because you managed it quickly and, most importantly, with quality. Your diligence and willingness to learn will definitely help you in mastering this new profession. Good luck to you.",
+      "author_name": "Myhajlo",
+      "author_designation": "Freelancer, Amsterdam"
     }
   ]
 }
