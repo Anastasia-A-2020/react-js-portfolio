@@ -451,6 +451,7 @@ h3 {
   align-items: flex-start;
   gap: 32px;
   align-self: stretch;
+  flex-grow: 1;
 }
 
 .portfolio--section--title {
@@ -458,6 +459,7 @@ h3 {
 }
 
 .portfolio--link {
+  margin-top: auto;
   text-decoration: none;
   display: flex;
   gap: 16px;
