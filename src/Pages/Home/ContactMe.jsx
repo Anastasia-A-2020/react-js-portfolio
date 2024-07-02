@@ -1,33 +1,65 @@
+import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+
 export default function ContactMe() {
+  const { register, handleSubmit, reset } = useForm({
+    defaultValues: {},
+  });
+
+  const submit = data => {
+    console.log(data);
+
+    const serviceID = "service_isvc9zm";
+    const templateID = "template_tzv3e5p";
+    const userID = "WzWwQRW6Br7P-DWzK";
+
+    emailjs
+      .send(serviceID, templateID, data, userID)
+      .then(response => {
+        console.log("Email sent successfully:", response.status, response.text);
+        reset();
+      })
+      .catch(error => {
+        console.error("Failed to send email:", error);
+      });
+
+    reset();
+  };
+
+  const error = data => {
+    console.log(data);
+  };
+
   return (
     <section className="contact--section" id="Contact">
       <div>
-        <p className="sub--title">Get In Toutch</p>
+        <p className="sub--title">Contact Me</p>
         <h2>Contact Me</h2>
-        <p className="text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
       </div>
-      <form action="" className="contact--form--container">
+      <form
+        action=""
+        className="contact--form--container"
+        onSubmit={handleSubmit(submit, error)}
+      >
         <div className="container">
-          <label htmlFor="first-name" className="contact--label">
-            <span className="text-md">First name</span>
+          <label htmlFor="form-name" className="contact--label">
+            <span className="text-md">Name</span>
             <input
               type="text"
               className="contact--input text-md"
-              name="first-name"
-              id="first-name"
-              required
+              name="form-name"
+              id="form-name"
+              {...register("form-name", { required: true })}
             />
           </label>
-          <label htmlFor="last-name" className="contact--label">
-            <span className="text-md">Last name</span>
+          <label htmlFor="company" className="contact--label">
+            <span className="text-md">Company</span>
             <input
               type="text"
               className="contact--input text-md"
-              name="last-name"
-              id="last-name"
-              required
+              name="company"
+              id="company"
+              {...register("company", { required: true })}
             />
           </label>
           <label htmlFor="email" className="contact--label">
@@ -37,7 +69,7 @@ export default function ContactMe() {
               className="contact--input text-md"
               name="email"
               id="email"
-              required
+              {...register("email", { required: true })}
             />
           </label>
           <label htmlFor="phone-number" className="contact--label">
@@ -47,17 +79,26 @@ export default function ContactMe() {
               className="contact--input text-md"
               name="phone-number"
               id="phone-number"
-              required
+              {...register("phone-number")}
             />
           </label>
         </div>
         <label htmlFor="choose-topic" className="contact--label">
           <span className="text-md">Choose a topic</span>
-          <select id="choose-topic" className="contact--input text-md">
+          <select
+            id="choose-topic"
+            className="contact--input text-md"
+            {...register("topic", { required: true })}
+          >
             <option value="">Select One...</option>
-            <option value="item-1">Item 1</option>
-            <option value="item-2">Item 2</option>
-            <option value="item-3">Item 3</option>
+            <option value="To offer a job">To offer a job</option>
+            <option value="Invite for an interview">
+              Invite for an interview
+            </option>
+            <option value="Unfortunately, we cannot offer you a job">
+              Unfortunately, we cannot offer you a job
+            </option>
+            <option value="Other">Other</option>
           </select>
         </label>
         <label htmlFor="message" className="contact--label">
@@ -67,6 +108,7 @@ export default function ContactMe() {
             id="message"
             rows="8"
             placeholder="Type your message..."
+            {...register("message")}
           />
         </label>
         <label htmlFor="checkbox" className="checkbox--label">

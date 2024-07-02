@@ -1,4 +1,20 @@
 /* Global css */
+:root {
+  --primary: #5e3bee;
+  --heading-color: #282938;
+  --bg-shade: #f5fcff;
+  --github: #e62872;
+  --darkblue: #1c1b53;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --bg-shade: #1c1b53;
+    --darkblue: #f5fcff;
+  }
+} */
 
 body {
   margin: 0;
@@ -16,16 +32,6 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-:root {
-  --primary: #5e3bee;
-  --heading-color: #282938;
-  --bg-shade: #f5fcff;
-  --github: #e62872;
-  --darkblue: #1c1b53;
-  --black: #000000;
-  --white: #ffffff;
 }
 
 .btn {
@@ -98,7 +104,7 @@ p {
 /* Heading css */
 
 h1 {
-  font-size: 56px;
+  font-size: 54px;
   font-weight: 700;
   line-height: 66px;
 }
@@ -230,6 +236,7 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+  width: 100%;
 }
 
 .hero--section__content {
@@ -237,13 +244,14 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   gap: 21.333px;
+  width: 100%;
 }
 
 .hero--section__title {
   color: var(--heading-color);
-  font-size: 74.667px;
+  font-size: 10vw;
   font-weight: 700;
-  line-height: 90px;
+  line-height: 1;
   align-self: stretch;
 }
 
@@ -742,13 +750,17 @@ input[type="number"] {
   .portfolio--container-box {
     gap: 30px;
   }
+
+  .hero--section,
+  .portfolio--section,
   .skills--section,
+  .about--section,
+  .portfolio--section,
   .testimonial--section,
   .contact--section,
   .footer--container {
     gap: 20px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 70px 25px 70px;
   }
   .about--section {
     gap: 20px;
@@ -766,6 +778,10 @@ input[type="number"] {
   }
   .hero--section--content--box {
     gap: 10px;
+  }
+  .portfolio--section--card,
+  .portfolio--section--card--content {
+    padding: 20px;
   }
   .contact--form--container {
     width: 100%;

@@ -27,7 +27,7 @@ export default function HeroSection() {
           to="Contact"
           className="btn btn-primary"
         >
-          Get In Touch
+          Contact Me
         </Link>
       </div>
       <div className="hero--section__img">

@@ -34,7 +34,7 @@ export default function AboutMe() {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="hero--section__content-box about--section--box">
         <h1 className="skills--section-heading">Work experience</h1>
         <p className="text-lg">Company &#34;LOPAN Group&#34;, Ukraine </p>
         <p className="hero--section__description">
