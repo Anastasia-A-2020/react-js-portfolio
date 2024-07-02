@@ -104,6 +104,20 @@ export default function Navbar() {
               Testimonials
             </Link>
           </li>
+          <li>
+            <Link
+              onClick={closeMenu}
+              activeClass="navbar--active-content"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to="cv"
+              className="navbar--content"
+            >
+              CV
+            </Link>
+          </li>
         </ul>
       </div>
       <Link

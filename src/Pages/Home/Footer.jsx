@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
+import { IoCloudDownloadOutline } from "react-icons/io5";
 
 function Footer() {
   return (
@@ -119,6 +120,16 @@ function Footer() {
         <div className="footer--social--icon">
           <ul>
             <li>
+              <a
+                id="cv"
+                href="./public/files/Anastasiia_Aleksandrova_frontend_developer.pdf"
+                className="footer--link text-sm"
+                download
+              >
+                <IoCloudDownloadOutline /> &#xa0;&#xa0;Download my CV
+              </a>
+            </li>
+            {/* <li>
               <Link
                 activeClass="navbar--active-content"
                 spy={true}
@@ -156,7 +167,7 @@ function Footer() {
               >
                 Cookies Settings
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
