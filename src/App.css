@@ -662,7 +662,7 @@ input[type="number"] {
   text-decoration: none;
 }
 .divider {
-  margin: 20px 0 15.67px;
+  margin: 14px 0 12px;
   height: 1.333px;
   width: 100%;
   background: rgba(40, 41, 56, 0.55);
@@ -681,16 +681,22 @@ input[type="number"] {
 }
 
 .footer--link {
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  padding: 2px 8px;
   display: inline-flex;
   align-items: center;
-
   text-decoration: none;
-  transition: color ease-in-out 0.2s;
+  background-color: transparent;
+  transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s,
+    background-color ease-in-out 0.2s;
 }
 
 .footer--link:hover,
 .footer--link:focus {
   color: var(--primary);
+  border-color: var(--primary);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Footer styles ends */
@@ -852,7 +858,7 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255);
-    top: -20rem;
+    top: -30rem;
     left: 0;
     width: 100%;
     transition: all ease-in-out 0.4s;

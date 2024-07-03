@@ -119,16 +119,6 @@ function Footer() {
         <p className="footer--content">Made with 💖 by Anastasiia</p>
         <div className="footer--social--icon">
           <ul>
-            <li>
-              <a
-                id="cv"
-                href="./public/files/Anastasiia_Aleksandrova_frontend_developer.pdf"
-                className="footer--link text-sm"
-                download
-              >
-                <IoCloudDownloadOutline /> &#xa0;&#xa0;Download my CV
-              </a>
-            </li>
             {/* <li>
               <Link
                 activeClass="navbar--active-content"
@@ -170,6 +160,14 @@ function Footer() {
             </li> */}
           </ul>
         </div>
+        <a
+          id="cv"
+          href="./public/files/Anastasiia_Aleksandrova_frontend_developer.pdf"
+          className="footer--link text-sm"
+          download
+        >
+          <IoCloudDownloadOutline /> &#xa0;&#xa0;Download my CV
+        </a>
       </div>
     </footer>
   );
